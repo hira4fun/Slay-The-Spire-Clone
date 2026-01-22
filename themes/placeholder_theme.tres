@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b0ri7hw8t04al"]
+
+[ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://Slay The Spire Clone/art/pixel_rpg.ttf" id="1_kvotu"]
+
+[resource]
+default_font = ExtResource("1_kvotu")
+default_font_size = 6

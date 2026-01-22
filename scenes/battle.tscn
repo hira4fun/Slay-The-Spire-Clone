@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://bpf3484wedrey"]
-
-[node name="Battle" type="Node2D"]
-metadata/_edit_lock_ = true
