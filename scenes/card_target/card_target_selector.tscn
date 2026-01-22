@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck7n7airb8275"]
+[gd_scene load_steps=4 format=3 uid="uid://ck7n7airb8275"]
 
 [ext_resource type="PackedScene" uid="uid://bayw0o2dd4jaw" path="res://Slay The Spire Clone/scenes/card_target/card_arc.tscn" id="1_t575f"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_target/card_target_selector.gd" id="1_tniuw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjm6b"]
 size = Vector2(4, 4)
 
 [node name="CardTargetSelector" type="Node2D"]
+script = ExtResource("1_tniuw")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 4
@@ -19,3 +21,6 @@ shape = SubResource("RectangleShape2D_yjm6b")
 layer = 2
 
 [node name="CardArc" parent="CanvasLayer" instance=ExtResource("1_t575f")]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
