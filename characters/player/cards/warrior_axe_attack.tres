@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://co54lhlgtg7p1"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://co54lhlgtg7p1"]
 
-[ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/card.gd" id="1_51hqg"]
+[ext_resource type="Texture2D" uid="uid://ck1t4hdip6xrl" path="res://Slay The Spire Clone/art/tile_0119.png" id="1_m8hpn"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/characters/player/cards/warrior_axe_attack.gd" id="1_opnar"]
 
 [resource]
-script = ExtResource("1_51hqg")
+script = ExtResource("1_opnar")
 id = "warrior_attack"
 type = 0
 target = 1
+cost = 1
+icon = ExtResource("1_m8hpn")
+tooltip_text = ""

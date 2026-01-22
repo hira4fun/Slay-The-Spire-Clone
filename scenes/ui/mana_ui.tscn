@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://byyjac1gnbv5w"]
+
+[ext_resource type="Theme" uid="uid://b0ri7hw8t04al" path="res://Slay The Spire Clone/themes/placeholder_theme.tres" id="1_rjakt"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/ui/mana_ui.gd" id="2_f0nh7"]
+
+[node name="ManaUI" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -22.0
+offset_right = 24.0
+offset_bottom = -4.0
+grow_vertical = 0
+theme = ExtResource("1_rjakt")
+script = ExtResource("2_f0nh7")
+
+[node name="ManaLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162

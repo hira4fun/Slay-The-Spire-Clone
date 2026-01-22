@@ -19,11 +19,15 @@ func reset_mana() -> void:
 	self.mana = max_mana
 
 
+func can_play_card(card: Card) -> bool:
+	return mana >= card.cost
+
 func create_instance() -> Resource:
 	var instance: CharacterStats = self.duplicate()
 	instance.health = max_health
 	instance.block = 0
 	instance.thorns = 0
+	instance.reset_mana()
 	instance.deck = instance.starting_deck.duplicate()
 	instance.draw_pile = CardPile.new()
 	instance.discard_pile = CardPile.new()

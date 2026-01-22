@@ -1,7 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b0ri7hw8t04al"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b0ri7hw8t04al"]
 
-[ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://Slay The Spire Clone/art/pixel_rpg.ttf" id="1_kvotu"]
+[ext_resource type="StyleBox" uid="uid://c0bb4v5rw1e1r" path="res://Slay The Spire Clone/scenes/card_ui/card_stylebox_1.tres" id="1_712g6"]
+[ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://Slay The Spire Clone/art/pixel_rpg.ttf" id="2_ettke"]
 
 [resource]
-default_font = ExtResource("1_kvotu")
+default_font = ExtResource("2_ettke")
 default_font_size = 6
+Panel/styles/panel = ExtResource("1_712g6")

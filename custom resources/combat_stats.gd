@@ -12,7 +12,7 @@ var thorns: int : set = set_thorns
 
 func set_health(value: int) -> void:
 	health = clampi(value, 0, max_health)
-	stats_changed.emit
+	stats_changed.emit()
 
 
 func set_block(value: int) -> void:

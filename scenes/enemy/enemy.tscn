@@ -8,6 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1spwp"]
 
 [node name="enemy" type="Area2D" groups=["enemies"]]
+light_mask = 4
 collision_layer = 4
 script = ExtResource("1_n0qxy")
 
@@ -18,6 +19,7 @@ texture = ExtResource("1_xblo8")
 shape = SubResource("RectangleShape2D_1spwp")
 
 [node name="arrow" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(15, 0)
 rotation = 4.71239
 texture = ExtResource("2_hxgpi")
@@ -25,3 +27,6 @@ texture = ExtResource("2_hxgpi")
 [node name="StatsUI" parent="." instance=ExtResource("3_m5mid")]
 offset_top = 7.0
 offset_bottom = 23.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

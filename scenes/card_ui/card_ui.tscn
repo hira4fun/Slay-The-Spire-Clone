@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://slunhj3l1qwt"]
+[gd_scene load_steps=12 format=3 uid="uid://slunhj3l1qwt"]
 
 [ext_resource type="Theme" uid="uid://b0ri7hw8t04al" path="res://Slay The Spire Clone/themes/placeholder_theme.tres" id="1_r3pal"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_ui/card_ui.gd" id="1_s5yma"]
@@ -7,7 +7,9 @@
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_ui/card_states/card_clicked_state.gd" id="5_fyhh0"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_ui/card_states/card_dragging_state.gd" id="6_x7fm8"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_ui/card_states/card_released_state.gd" id="7_7d5ff"]
+[ext_resource type="StyleBox" uid="uid://c0bb4v5rw1e1r" path="res://Slay The Spire Clone/scenes/card_ui/card_stylebox_1.tres" id="8_1x1dr"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/card_ui/card_states/card_aiming_state.gd" id="8_lqna1"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://Slay The Spire Clone/art/tile_0103.png" id="10_r5jck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3e1x"]
 size = Vector2(25, 30)
@@ -24,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s5yma")
 
-[node name="Color" type="ColorRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,19 +34,42 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(4.33177e-07, 0.332571, 0.166586, 1)
+theme_override_styles/panel = ExtResource("8_1x1dr")
 
-[node name="State" type="Label" parent="."]
+[node name="Cost" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -4.5
+offset_top = -10.0
+offset_right = 5.5
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme = ExtResource("1_r3pal")
-text = "state"
+text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_r5jck")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="DropPointDetector" type="Area2D" parent="."]
 collision_mask = 2
