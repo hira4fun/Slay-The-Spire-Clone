@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1vpjjmi5cj3n"
+path="res://.godot/imported/axe.ogg-1093affe980644d64b9ff39fb81a342a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Slay The Spire Clone/art/axe.ogg"
+dest_files=["res://.godot/imported/axe.ogg-1093affe980644d64b9ff39fb81a342a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

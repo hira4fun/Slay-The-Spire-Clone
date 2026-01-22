@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://de2ryat1pxq6"
+path="res://.godot/imported/enemy_attack.ogg-58b725f41004b9dae594f01e0083051e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Slay The Spire Clone/art/enemy_attack.ogg"
+dest_files=["res://.godot/imported/enemy_attack.ogg-58b725f41004b9dae594f01e0083051e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
