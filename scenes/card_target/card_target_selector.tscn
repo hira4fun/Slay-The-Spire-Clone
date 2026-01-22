@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck7n7airb8275"]
+
+[ext_resource type="PackedScene" uid="uid://bayw0o2dd4jaw" path="res://Slay The Spire Clone/scenes/card_target/card_arc.tscn" id="1_t575f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjm6b"]
+size = Vector2(4, 4)
+
+[node name="CardTargetSelector" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yjm6b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CardArc" parent="CanvasLayer" instance=ExtResource("1_t575f")]
