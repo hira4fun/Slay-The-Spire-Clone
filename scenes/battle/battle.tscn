@@ -1,17 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpf3484wedrey"]
+[gd_scene load_steps=12 format=3 uid="uid://bpf3484wedrey"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://Slay The Spire Clone/art/background.png" id="1_xyblx"]
-[ext_resource type="Texture2D" uid="uid://1u3b3hwqd8yh" path="res://Slay The Spire Clone/art/tile_0110.png" id="2_0g73i"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/ui/hand.gd" id="2_at7y3"]
+[ext_resource type="PackedScene" uid="uid://dohcrrspov24b" path="res://Slay The Spire Clone/scenes/enemy/enemy.tscn" id="2_gdfiq"]
 [ext_resource type="PackedScene" uid="uid://slunhj3l1qwt" path="res://Slay The Spire Clone/scenes/card_ui/card_ui.tscn" id="2_kkg4o"]
+[ext_resource type="Resource" uid="uid://c6q4y204guhjd" path="res://Slay The Spire Clone/enemies/crab/test_enemy.tres" id="3_0w7w6"]
+[ext_resource type="PackedScene" uid="uid://dn2lrsut6b3hk" path="res://Slay The Spire Clone/scenes/player/player.tscn" id="3_5yp0f"]
 [ext_resource type="PackedScene" uid="uid://ck7n7airb8275" path="res://Slay The Spire Clone/scenes/card_target/card_target_selector.tscn" id="3_ijdf4"]
+[ext_resource type="Resource" uid="uid://dmvo1didt66gh" path="res://Slay The Spire Clone/characters/player/warrior.tres" id="4_5xwbh"]
 [ext_resource type="Resource" uid="uid://co54lhlgtg7p1" path="res://Slay The Spire Clone/characters/player/cards/warrior_axe_attack.tres" id="4_b60lf"]
 [ext_resource type="Resource" uid="uid://cskjrdrca4331" path="res://Slay The Spire Clone/characters/player/cards/warrior_block.tres" id="5_v0md4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1xjs"]
 size = Vector2(256, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1spwp"]
 
 [node name="Battle" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -30,15 +31,13 @@ position = Vector2(128, 50)
 shape = SubResource("RectangleShape2D_d1xjs")
 debug_color = Color(0, 0.6, 0.701961, 0.172549)
 
-[node name="enemy" type="Area2D" parent="."]
-position = Vector2(213, 78)
-collision_layer = 4
+[node name="enemy" parent="." instance=ExtResource("2_gdfiq")]
+position = Vector2(203, 75)
+stats = ExtResource("3_0w7w6")
 
-[node name="Sprite2D" type="Sprite2D" parent="enemy"]
-texture = ExtResource("2_0g73i")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
-shape = SubResource("RectangleShape2D_1spwp")
+[node name="Player" parent="." instance=ExtResource("3_5yp0f")]
+position = Vector2(50, 71)
+stats = ExtResource("4_5xwbh")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("3_ijdf4")]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=5 format=3 uid="uid://cf0o85wtvg7r3"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/card.gd" id="1_tw7f6"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/card_pile.gd" id="2_kjacp"]
+[ext_resource type="Resource" uid="uid://co54lhlgtg7p1" path="res://Slay The Spire Clone/characters/player/cards/warrior_axe_attack.tres" id="2_uvedi"]
+[ext_resource type="Resource" uid="uid://cskjrdrca4331" path="res://Slay The Spire Clone/characters/player/cards/warrior_block.tres" id="3_bx2hb"]
+
+[resource]
+script = ExtResource("2_kjacp")
+cards = Array[ExtResource("1_tw7f6")]([ExtResource("2_uvedi"), ExtResource("2_uvedi"), ExtResource("2_uvedi"), ExtResource("2_uvedi"), ExtResource("2_uvedi"), ExtResource("3_bx2hb"), ExtResource("3_bx2hb"), ExtResource("3_bx2hb"), ExtResource("3_bx2hb"), ExtResource("3_bx2hb")])

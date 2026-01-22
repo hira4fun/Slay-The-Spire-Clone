@@ -13,8 +13,8 @@ func _ready() -> void:
 	Events.card_aim_started.connect(_on_card_aim_started)
 	Events.card_aim_ended.connect(_on_card_aim_ended)
 
-
-func _process(delta: float) -> void:
+#if stuff stops working check the underscore here
+func _process(_delta: float) -> void:
 	if not targeting:
 		return
 

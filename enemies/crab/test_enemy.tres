@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CombatStats" load_steps=3 format=3 uid="uid://c6q4y204guhjd"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/combat_stats.gd" id="1_0boyn"]
+[ext_resource type="Texture2D" uid="uid://1u3b3hwqd8yh" path="res://Slay The Spire Clone/art/tile_0110.png" id="1_f4oj2"]
+
+[resource]
+script = ExtResource("1_0boyn")
+max_health = 10
+art = ExtResource("1_f4oj2")

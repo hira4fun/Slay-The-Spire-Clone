@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dohcrrspov24b"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/enemy/enemy.gd" id="1_n0qxy"]
+[ext_resource type="Texture2D" uid="uid://1u3b3hwqd8yh" path="res://Slay The Spire Clone/art/tile_0110.png" id="1_xblo8"]
+[ext_resource type="Texture2D" uid="uid://bb3rcs5nqntir" path="res://Slay The Spire Clone/art/arrow.png" id="2_hxgpi"]
+[ext_resource type="PackedScene" uid="uid://deoxl3aqtefwv" path="res://Slay The Spire Clone/scenes/ui/stats_ui.tscn" id="3_m5mid"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1spwp"]
+
+[node name="enemy" type="Area2D" groups=["enemies"]]
+collision_layer = 4
+script = ExtResource("1_n0qxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xblo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1spwp")
+
+[node name="arrow" type="Sprite2D" parent="."]
+position = Vector2(15, 0)
+rotation = 4.71239
+texture = ExtResource("2_hxgpi")
+
+[node name="StatsUI" parent="." instance=ExtResource("3_m5mid")]
+offset_top = 7.0
+offset_bottom = 23.0
