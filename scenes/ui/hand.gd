@@ -21,3 +21,4 @@ func _on_card_ui_reparent_requested(child: CardUI) -> void:
 	child.reparent(self)
 #var new_index :=clampi(child.original_index - cards_played_this_turn, 0, get_child_count())
 #move_child.call_deferred(child, new_index)
+#this lets u keep cards in the same order they were originally
