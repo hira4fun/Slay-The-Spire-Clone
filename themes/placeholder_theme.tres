@@ -1,9 +1,54 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b0ri7hw8t04al"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b0ri7hw8t04al"]
 
 [ext_resource type="StyleBox" uid="uid://c0bb4v5rw1e1r" path="res://Slay The Spire Clone/scenes/card_ui/card_stylebox_1.tres" id="1_712g6"]
+[ext_resource type="StyleBox" uid="uid://dk3lfhjokgisx" path="res://Slay The Spire Clone/scenes/card_ui/card_hover_shadowbox.tres" id="2_e3w15"]
 [ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://Slay The Spire Clone/art/pixel_rpg.ttf" id="2_ettke"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hquua"]
+bg_color = Color(0.6, 0.419608, 0.180392, 0.486275)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lg7bf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5r7s"]
+bg_color = Color(0.6, 0.419608, 0.180392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.437085, 0.455066, 0.107609, 0.6)
+shadow_color = Color(0.700335, 0.727952, 0.185746, 0.6)
 
 [resource]
 default_font = ExtResource("2_ettke")
 default_font_size = 6
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 0.439216)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.541176)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 6
+Button/fonts/font = ExtResource("2_ettke")
+Button/styles/disabled = SubResource("StyleBoxFlat_hquua")
+Button/styles/focus = SubResource("StyleBoxEmpty_lg7bf")
+Button/styles/hover = ExtResource("2_e3w15")
+Button/styles/normal = ExtResource("1_712g6")
+Button/styles/pressed = SubResource("StyleBoxFlat_c5r7s")
 Panel/styles/panel = ExtResource("1_712g6")
+PanelContainer/styles/panel = ExtResource("1_712g6")

@@ -1,21 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpf3484wedrey"]
+[gd_scene load_steps=15 format=3 uid="uid://bpf3484wedrey"]
 
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/battle/battle.gd" id="1_prp3j"]
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://Slay The Spire Clone/art/background.png" id="1_xyblx"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/ui/hand.gd" id="2_at7y3"]
 [ext_resource type="PackedScene" uid="uid://dohcrrspov24b" path="res://Slay The Spire Clone/scenes/enemy/enemy.tscn" id="2_gdfiq"]
-[ext_resource type="PackedScene" uid="uid://slunhj3l1qwt" path="res://Slay The Spire Clone/scenes/card_ui/card_ui.tscn" id="2_kkg4o"]
 [ext_resource type="Resource" uid="uid://c6q4y204guhjd" path="res://Slay The Spire Clone/enemies/crab/test_enemy.tres" id="3_0w7w6"]
 [ext_resource type="PackedScene" uid="uid://dn2lrsut6b3hk" path="res://Slay The Spire Clone/scenes/player/player.tscn" id="3_5yp0f"]
 [ext_resource type="PackedScene" uid="uid://ck7n7airb8275" path="res://Slay The Spire Clone/scenes/card_target/card_target_selector.tscn" id="3_ijdf4"]
 [ext_resource type="Resource" uid="uid://dmvo1didt66gh" path="res://Slay The Spire Clone/characters/player/warrior.tres" id="4_5xwbh"]
-[ext_resource type="Resource" uid="uid://co54lhlgtg7p1" path="res://Slay The Spire Clone/characters/player/cards/warrior_axe_attack.tres" id="4_b60lf"]
-[ext_resource type="Resource" uid="uid://cskjrdrca4331" path="res://Slay The Spire Clone/characters/player/cards/warrior_block.tres" id="5_v0md4"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/player/player_handler.gd" id="8_1u80f"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/ui/battle_ui.gd" id="8_kloxa"]
 [ext_resource type="PackedScene" uid="uid://byyjac1gnbv5w" path="res://Slay The Spire Clone/scenes/ui/mana_ui.tscn" id="11_v3hg2"]
+[ext_resource type="PackedScene" uid="uid://bft6xd3ooppic" path="res://Slay The Spire Clone/scenes/ui/tooltip.tscn" id="12_rnvc6"]
+[ext_resource type="Theme" uid="uid://b0ri7hw8t04al" path="res://Slay The Spire Clone/themes/placeholder_theme.tres" id="13_0wnah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1xjs"]
 size = Vector2(256, 100)
 
 [node name="Battle" type="Node2D"]
+script = ExtResource("1_prp3j")
+char_stats = ExtResource("4_5xwbh")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -42,7 +46,12 @@ stats = ExtResource("4_5xwbh")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("3_ijdf4")]
 
+[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand")]
+script = ExtResource("8_1u80f")
+hand = NodePath("../BattleUI/Hand")
+
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
+script = ExtResource("8_kloxa")
 
 [node name="Hand" type="HBoxContainer" parent="BattleUI"]
 anchors_preset = 7
@@ -58,20 +67,25 @@ grow_vertical = 0
 alignment = 1
 script = ExtResource("2_at7y3")
 
-[node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("2_kkg4o")]
-layout_mode = 2
-card = ExtResource("4_b60lf")
-char_stats = ExtResource("4_5xwbh")
-
-[node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("2_kkg4o")]
-layout_mode = 2
-card = ExtResource("4_b60lf")
-char_stats = ExtResource("4_5xwbh")
-
-[node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("2_kkg4o")]
-layout_mode = 2
-card = ExtResource("5_v0md4")
-char_stats = ExtResource("4_5xwbh")
-
 [node name="ManaUI" parent="BattleUI" instance=ExtResource("11_v3hg2")]
 char_stats = ExtResource("4_5xwbh")
+
+[node name="Tooltip" parent="BattleUI" instance=ExtResource("12_rnvc6")]
+offset_top = 6.0
+offset_bottom = 42.0
+
+[node name="EndTurnButton" type="Button" parent="BattleUI"]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -20.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("13_0wnah")
+text = "End Turn"
