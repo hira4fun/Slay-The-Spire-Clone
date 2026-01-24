@@ -1,7 +1,8 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://co54lhlgtg7p1"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://co54lhlgtg7p1"]
 
 [ext_resource type="Texture2D" uid="uid://ck1t4hdip6xrl" path="res://Slay The Spire Clone/art/tile_0119.png" id="1_m8hpn"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/characters/player/cards/warrior_axe_attack.gd" id="1_opnar"]
+[ext_resource type="AudioStream" uid="uid://b1vpjjmi5cj3n" path="res://Slay The Spire Clone/art/axe.ogg" id="3_24du6"]
 
 [resource]
 script = ExtResource("1_opnar")
@@ -11,3 +12,4 @@ target = 1
 cost = 1
 icon = ExtResource("1_m8hpn")
 tooltip_text = "[center]Deal [color=\"ff0000\"]6[/color] damage.[/center]"
+sound = ExtResource("3_24du6")

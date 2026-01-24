@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c1kulype1g0wh"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/characters/player/cards/warrior_slash.gd" id="1_caxoo"]
+[ext_resource type="Texture2D" uid="uid://cqcal03735mv8" path="res://Slay The Spire Clone/art/tile_0118.png" id="1_dige1"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://Slay The Spire Clone/art/slash.ogg" id="3_uk87q"]
+
+[resource]
+script = ExtResource("1_caxoo")
+id = "warrior_slash"
+type = 0
+target = 2
+cost = 2
+icon = ExtResource("1_dige1")
+tooltip_text = "[center]Deal [color=\"ff0000\"]4[/color] damage to all enemies.[/center]"
+sound = ExtResource("3_uk87q")

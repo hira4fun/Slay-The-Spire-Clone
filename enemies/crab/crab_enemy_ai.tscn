@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://byo8sv8pydibn"]
+[gd_scene load_steps=14 format=3 uid="uid://byo8sv8pydibn"]
 
 [ext_resource type="Script" path="res://Slay The Spire Clone/scenes/enemy/enemy_action_picker.gd" id="1_yfbje"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_attack_action.gd" id="2_j7v0m"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_block_action.gd" id="3_hqwg1"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_mega_block_action.gd" id="4_tblqs"]
 [ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/intent.gd" id="4_yfds6"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://Slay The Spire Clone/art/enemy_attack.ogg" id="5_31h67"]
 [ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://Slay The Spire Clone/art/tile_0101.png" id="6_0bw04"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://Slay The Spire Clone/art/enemy_block.ogg" id="8_3mrer"]
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://Slay The Spire Clone/art/tile_0102.png" id="8_uxc6m"]
 
 [sub_resource type="Resource" id="Resource_oyfan"]
@@ -30,15 +32,18 @@ script = ExtResource("1_yfbje")
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_j7v0m")
 intent = SubResource("Resource_oyfan")
+sound = ExtResource("5_31h67")
 type = 1
 chance_weight = 1.0
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_hqwg1")
 intent = SubResource("Resource_atmb8")
+sound = ExtResource("8_3mrer")
 type = 1
 chance_weight = 1.0
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_tblqs")
 intent = SubResource("Resource_2wgdv")
+sound = ExtResource("8_3mrer")

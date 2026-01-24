@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://cw2ur60xeyuls"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/custom resources/enemy_stats.gd" id="1_jsvnv"]
+[ext_resource type="PackedScene" uid="uid://dsqqwysbkrhm1" path="res://Slay The Spire Clone/enemies/bat/bat_enemy_ai.tscn" id="1_uvpw3"]
+[ext_resource type="Texture2D" uid="uid://con6y7mc74c5a" path="res://Slay The Spire Clone/art/tile_0120.png" id="2_eeah3"]
+
+[resource]
+script = ExtResource("1_jsvnv")
+ai = ExtResource("1_uvpw3")
+max_health = 8
+art = ExtResource("2_eeah3")
