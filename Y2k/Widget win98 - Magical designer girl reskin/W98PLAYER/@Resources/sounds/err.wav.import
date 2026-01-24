@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpikgqy3ookg"
+path="res://.godot/imported/err.wav-6801d516df9fb1a72fa8c51423381588.sample"
+
+[deps]
+
+source_file="res://Slay The Spire Clone/Y2k/Widget win98 - Magical designer girl reskin/W98PLAYER/@Resources/sounds/err.wav"
+dest_files=["res://.godot/imported/err.wav-6801d516df9fb1a72fa8c51423381588.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

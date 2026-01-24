@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://byo8sv8pydibn"]
+
+[ext_resource type="Script" path="res://Slay The Spire Clone/scenes/enemy/enemy_action_picker.gd" id="1_yfbje"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_attack_action.gd" id="2_j7v0m"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_block_action.gd" id="3_hqwg1"]
+[ext_resource type="Script" path="res://Slay The Spire Clone/enemies/crab/crab_mega_block_action.gd" id="4_tblqs"]
+
+[node name="CrabEnemyAI" type="Node"]
+script = ExtResource("1_yfbje")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("2_j7v0m")
+type = 1
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("3_hqwg1")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("4_tblqs")
