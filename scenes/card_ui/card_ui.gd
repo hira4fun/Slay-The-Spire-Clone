@@ -16,7 +16,7 @@ const HOVER_STYLEBOX :=preload("res://Slay The Spire Clone/scenes/card_ui/card_h
 @onready var drop_point_detector: Area2D = $DropPointDetector
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
-# @onready var original_index := self.get_index() 
+#var original_index := 0
 #lets u keep the hand position consistent when used w code in hand script
 var parent: Control
 var tween: Tween
